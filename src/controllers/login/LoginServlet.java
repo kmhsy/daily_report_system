@@ -66,7 +66,7 @@ public class LoginServlet extends HttpServlet {
                     (String)this.getServletContext().getAttribute("salt")
                     );
             try {
-                 e = em.createNamedQuery("checkLongCodeAndPassword",Employee.class)
+                 e = em.createNamedQuery("checkLoginCodeAndPassword",Employee.class)
                        .setParameter("code",code)
                        .setParameter("pass",password)
                        .getSingleResult();
