@@ -71,10 +71,10 @@ public class EmployeesUpdateServlet extends HttpServlet {
                  em.close();
 
                  request.setAttribute("_token",request.getSession().getId());
-                 request.setAttribute("emloyee", e);
+                 request.setAttribute("employee", e);
                  request.setAttribute("errors",errors);
 
-                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/employees/sdit.jsp");
+                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/employees/edit.jsp");
                  rd.forward(request,response);
                  }else {
                      em.getTransaction().begin();
