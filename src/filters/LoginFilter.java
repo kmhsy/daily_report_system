@@ -50,7 +50,7 @@ public class LoginFilter implements Filter {
            if(!servlet_path.equals("/login")) {
 
                if(e == null) {
-                   ((HttpServletResponse)request).sendRedirect(context_path +"/login");
+                   ((HttpServletResponse)response).sendRedirect(context_path +"/login");
                    return;
                }
 
